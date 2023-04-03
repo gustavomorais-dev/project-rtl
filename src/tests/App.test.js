@@ -36,7 +36,7 @@ describe('Testes do componente App', () => {
     expect(history.location.pathname).toBe('/favorites');
   });
 
-  it('renderiza a página de Not Found ao acessar uma URL desconhecida', () => {
+  it('Renderiza a página de Not Found ao acessar uma URL desconhecida', () => {
     const { history } = renderWithRouter(<App />);
     act(() => {
       history.push('/pagina/que-nao-existe/');

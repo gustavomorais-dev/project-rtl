@@ -9,8 +9,8 @@ import isPokemonFavoriteByIdMock from '../mocks/pokemonFavorite';
 
 const nextButtonTestId = 'next-pokemon';
 
-describe('Pokedex', () => {
-  it('should render the heading with the text "Encountered Pokémon"', () => {
+describe('Testes do componente Pokedex', () => {
+  it('A página contém um heading h2 com o texto Encountered Pokémon', () => {
     renderWithRouter(<Pokedex
       pokemonList={ pokemonListMock }
       isPokemonFavoriteById={ isPokemonFavoriteByIdMock }
@@ -19,7 +19,7 @@ describe('Pokedex', () => {
     expect(heading).toBeInTheDocument();
   });
 
-  it('should render the first pokemon of the list by default', () => {
+  it('Renderiza o primeiro pokémon da lista como padrão', () => {
     renderWithRouter(<Pokedex
       pokemonList={ pokemonListMock }
       isPokemonFavoriteById={ isPokemonFavoriteByIdMock }
@@ -28,7 +28,7 @@ describe('Pokedex', () => {
     expect(pokemonName).toBeInTheDocument();
   });
 
-  it('should render the next pokemon when clicking the "Próximo Pokémon" button', () => {
+  it('Renderiza o próximo pokémon quando clica em "Próximo pokémon"', () => {
     renderWithRouter(<Pokedex
       pokemonList={ pokemonListMock }
       isPokemonFavoriteById={ isPokemonFavoriteByIdMock }
@@ -53,7 +53,7 @@ describe('Pokedex', () => {
     expect(pokemonName).toBeInTheDocument();
   });
 
-  test('only one Pokemon is displayed at a time', () => {
+  it('Exibe apenas um pokémon por vez', () => {
     renderWithRouter(<Pokedex
       pokemonList={ pokemonListMock }
       isPokemonFavoriteById={ isPokemonFavoriteByIdMock }
